@@ -8,9 +8,9 @@ public class ProstyPortalTester {
         String wybranePole = "2";
         String wynik = wit.sprawdz(wybranePole);
         String wynikTestu = "niepowodzenie";
-        if (wynik.equals("trafiony")) {
+        /*if (wynik.equals("trafiony")) {
             wynikTestu = "zakonczony pomyslnie";
         }
-        System.out.println(wynikTestu);
+        System.out.println(wynikTestu);*/
     }
 }
