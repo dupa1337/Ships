@@ -9,6 +9,7 @@ public class ProstyPortalTester {
         ProstyPortal portal = new ProstyPortal();
         int poczatekPortalu = (int) (Math.random() * 5);
         int[] polozenia = {poczatekPortalu, poczatekPortalu + 1, poczatekPortalu + 2};
+
         portal.setPolaPolozenia(polozenia);
         boolean czyIstnieje = true;
         while (czyIstnieje) {
