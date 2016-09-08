@@ -1,28 +1,28 @@
 package ProstyPortal;
 
-class ProstyPortal {
-    int[] polaPolozenia;
-    int iloscTrafien;
-    boolean[] tablicaLogiczna;
+import java.util.ArrayList;
 
-    public void setPolaPolozenia(int[] ppol) {
-        polaPolozenia = ppol;
+class Portal {
+    private ArrayList<String> polaPolozenia;
+
+    void setPolaPolozenia(int[] ppol) {
+        ArrayList<String> ppol;
     }
 
-    String sprawdz(String stringPole) {
-        int strzal = Integer.parseInt(stringPole);
+    String sprawdz(String ruch) {
+
         String wynik = "pudlo";
-        for (int pole : polaPolozenia) {
-            if (strzal == pole) {
+
+        int indeks = polaPolozenia.indexOf(ruch);
+
+        if (indeks >= 0) {
+            polaPolozenia.remove(indeks);
+            if (polaPolozenia.isEmpty()) {
+                wynik = "zatopiony";
+            } else {
                 wynik = "trafiony";
-                iloscTrafien++;
-                break;
             }
         }
-        if (iloscTrafien == polaPolozenia.length) {
-            wynik = "zatopiony";
-        }
-        System.out.println(wynik);
         return wynik;
     }
 }
